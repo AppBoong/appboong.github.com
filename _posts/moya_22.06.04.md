@@ -1,8 +1,6 @@
 ---
-layout: post
 title:  "Moya가 모야?"
-date:   2022-06-04 10:46:00 +0900
-<!--categories: [프로그래밍]-->
+layout: post
 ---
 
 # Moya
@@ -160,3 +158,4 @@ class UserViewController: UIViewController {
 [[iOS] Moya를 사용한 네트워킹 (Swift Http 통신) (velog.io)](https://velog.io/@dlskawns96/iOS-Moya%EB%A5%BC-%EC%82%AC%EC%9A%A9%ED%95%9C-%EB%84%A4%ED%8A%B8%EC%9B%8C%ED%82%B9-Swift-Http-%ED%86%B5%EC%8B%A0)
 
 [[iOS] Moya에 대해서 공부해보아요 (tistory.com)](https://lidium.tistory.com/37)
+
