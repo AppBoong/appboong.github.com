@@ -7,7 +7,7 @@ layout: post
 
 ## What is RxSwfit?
 
-![reactivex_logo](/images/2022-06-12_RxSwfit1/reactivex_logo.png)
+![reactivex_logo](/_images/2022-06-12_RxSwfit1/reactivex_logo.png)
 
 ***Reactive eXtension Swift → RxSwift***
 
@@ -36,7 +36,8 @@ RxSwfit 란 Swift에 반응형 프로그래밍을 더해 비동기&이벤트를 
 
 - 데이터 바인딩을 제공하는 플랫폼에서 만들어진 이벤트 중심 프로그램을 위해 개발된 RxSwift는
 MVVM패턴과 연관성이 높다
-![RxSwift_MVVM](/images/2022-06-12_RxSwfit1/RxSwift_MVVM.png)
+
+![RxSwift_MVVM](/_images/2022-06-12_RxSwfit1/RxSwift_MVVM.png)
 
 ## Rx의 3요소
 
@@ -93,7 +94,8 @@ searchBar.rx.text
 
 - 기존에 사용하던 DispatchQueue와 동일한 기능
 - 프로세스가 있는 곳의 context( = thread)
-![RxSwift_scheduler](/images/2022-06-12_RxSwfit1/RxSwift_scheduler.png)
+
+![RxSwift_scheduler](/_images/2022-06-12_RxSwfit1/RxSwift_scheduler.png)
 
 > scheduler 종류
 > 
