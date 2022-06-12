@@ -1,6 +1,6 @@
 ---
-title: "Posts by Category"
-layout: categories
-permalink: /categories/
+title: "Swift"
+layout: swift
+permalink: /swift/
 author_profile: true
 ---
