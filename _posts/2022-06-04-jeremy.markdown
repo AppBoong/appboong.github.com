@@ -1,0 +1,162 @@
+---
+layout: post
+title:  "Moya가 모야?"
+date:   2022-06-04 10:46:00 +0900
+<!--categories: [프로그래밍]-->
+---
+
+# Moya
+
+## `Alamofire`가 있지만 굳이 `Moya`를 쓰는 이유
+> 
+- `Alamofire`를 사용하면 URL과 같은 것을 사용할때 request에 넣어주어야 하며(Network Layer접근), 템플릿이 갖추어 지지 않아서 재사용에 유리하지 않은 구조이다
+- `Moya`를 사용하면 `Moya`에서 Network Layer를 템플릿화 해놨기 때문에, request, response만 처리하면 됨
+- `Moya`는 `URLSession` 을 추상화한 `Alamofire`를 다시 추상화한 프레임워크로
+Network Layer를 템플릿화 해서 재사용성을 높히고, 개발자가 request, response에만 신경을 쓰도록 해줌
+- 열거형(enum)을 사용하여 네트워크 요청을 type-safe한 방식으로 캡슐화 하는데 초점을 맞춤
+
+> **추상화란?**
+> 
+- OOP의 특징중 하나로 객체들의 **공통적인 부분을 따로 뽑아내 구현해놓은 것**을 말함
+공통적인 부분들만 추려놓았기 때문에 구체적인 정보를 담아두지 못하고, 추상적인 정보만 모여있기 때문에 ‘추상화'라고 부름
+
+## API Target Enum
+
+필요한 API service 를 열거체로 생성
+
+```swift
+import Moya
+
+struct APIEnvironment {
+    static let baseUrl = URL(string: "https://baseurl.com")!
+}
+
+enum UserService {
+    case createUser(_ name: String)
+    case readUsers
+    case updateUser(_ id: Int, _ name: String)
+    case deleteUser(_ id: Int)
+}
+```
+
+## TargetType 구현
+
+`extension` 으로 `TargetType`을 채택해 필요한 속성들을 열거체에 부여함
+
+- `baseURL`: 서버의 Base URL
+- `path`: API 주소, baseURL 뒤에 경로 형태로 붙음
+- `method`: HTTP method
+- `sampleData`: 테스트용 Mock Data
+- `task`: request에 사용되는 파라미터
+- `validationType`: 허용할 response의 타입
+- `headers`: HTTP headers
+
+```swift
+extension UserService: TargetType {
+    var baseURL: URL {
+        return APIEnvironment.baseUrl
+    }
+    
+    var path: String {
+        switch self {
+        case .createUser(_), .readUsers :
+            return "/user"
+        case .updateUser(let id,_), .deleteUser(let id) :
+            return "/user/\(id)"
+        }
+    }
+    
+    var method: Moya.Method {
+        switch self {
+        case .createUser:
+            return .post
+        case .readUsers:
+            return .get
+        case .updateUser:
+            return .put
+        case .deleteUser:
+            return .delete
+        }
+    }
+    
+    var sampleData: Data {
+        return Data()
+    }
+    
+    var task: Task {
+        switch self {
+        case .createUser(_), .readUsers, .deleteUser(_):
+            return .requestPlain
+       
+        case .updateUser(_, let name):
+            return .requestParameters(parameters: ["name" : name], encoding: URLEncoding.queryString)
+        }
+    }
+    
+    var headers: [String : String]? {
+        let accessToken = UserDefaults.standard.string(forKey: "userAccessToken")
+        return ["Authorization" : "Bearer \(accessToken)"]
+    }
+}
+```
+
+## Request
+
+```swift
+struct UserRequest: Codable {
+    var id: Int?
+    var name: String?
+}
+```
+
+## Response
+
+```swift
+struct UserResponse: Decodable {
+    var user: User?
+    
+    struct User: Decodable {
+        var id: Int?
+        var name: String?
+        var profileImage: String?
+        var phone: String?
+    }
+}
+```
+
+## Usage
+
+```swift
+import RxSwift
+
+class UserViewController: UIViewController {
+    
+    private let provider = MoyaProvider<UserService>()
+    
+    private let bag = DisposeBag()
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        provider.rx
+            .request(.readUsers)
+            .filterSuccessfulStatusCodes()
+            .map([UserResponse.User].self)
+            .subscribe { result in
+                switch result {
+                case .success(let response):
+                    print(response)
+                case .error(let error):
+                    print(error.localizedDescription)
+                }
+            }.disposed(by: bag)
+    }
+}
+```
+
+### 출처:
+
+[[Moya] Moya프레임 워크 (RESTFul API) (tistory.com)](https://ios-development.tistory.com/193)
+
+[[iOS] Moya를 사용한 네트워킹 (Swift Http 통신) (velog.io)](https://velog.io/@dlskawns96/iOS-Moya%EB%A5%BC-%EC%82%AC%EC%9A%A9%ED%95%9C-%EB%84%A4%ED%8A%B8%EC%9B%8C%ED%82%B9-Swift-Http-%ED%86%B5%EC%8B%A0)
+
+[[iOS] Moya에 대해서 공부해보아요 (tistory.com)](https://lidium.tistory.com/37)
