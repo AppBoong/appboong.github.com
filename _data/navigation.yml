@@ -17,9 +17,9 @@ sidebar:
   - title: iOS
     children:
       - title   : "RxSwift"
-        url     : "/_pages"
+        url     : ""
         category: "RxSwift"
       - title   : "Network"
-        url     : "/_pages"
+        url     : ""
         category: "Network"
   - title: ETC

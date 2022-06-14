@@ -295,4 +295,5 @@ defaults:
       path: ""
       type: sidebar
     values:
-      sidebar: true
+      sidebar:
+        nav: "sidebar"
