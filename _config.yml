@@ -290,4 +290,5 @@ defaults:
       comments: # true
       share: true
       related: true
-      docs: true
+      sidebar:
+        nav: "docs"
