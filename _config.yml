@@ -290,10 +290,7 @@ defaults:
       comments: # true
       share: true
       related: true
-  # sidebar
-  - scope:
-      path: ""
-      type: sidebar
-    values:
-      sidebar:
-        nav: "sidebar"
+
+sidebar:
+  nav: "sidebar"
+      
