@@ -13,7 +13,7 @@ main:
 #  - title: "tags"
 #  - url: /tags/
 
-docs:
+sidebar:
   - title: iOS
     children:
       - title   : "RxSwift"
