@@ -12,3 +12,14 @@ main:
 #  - url: "/categories/"
 #  - title: "tags"
 #  - url: /tags/
+
+sidebar:
+  - title: iOS
+    children:
+      - title   : "RxSwift"
+        url     : "/_pages"
+        category: "rxswift"
+      - title   : "Network"
+        url     : "/_pages"
+        category: "network"
+  - title: ETC
