@@ -18,8 +18,8 @@ sidebar:
     children:
       - title   : "RxSwift"
         url     : "/_pages"
-        category: "rxswift"
+        category: "RxSwift"
       - title   : "Network"
         url     : "/_pages"
-        category: "network"
+        category: "Network"
   - title: ETC
