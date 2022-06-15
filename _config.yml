@@ -128,8 +128,6 @@ author:
     - label: "Instagram"
       icon : "fab fa-fw fa-instagram"
       url  : "https://instagram.com/oizhofz"
-  sidebar:
-    nav: "sidebar"
 
 # Site Footer
 footer:
@@ -293,6 +291,6 @@ defaults:
       share: true
       related: true
       sidebar:
-        nav: "sidebar"
+        nav: sidebar
 
       
