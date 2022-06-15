@@ -1,5 +1,5 @@
 ---
-title:  "[Network] Moya가 모야?"
+title:  "['Network'] Moya가 모야?"
 last_modified_at: 2022-06-04T19:06:00-05:00
 toc: true
 categories:
