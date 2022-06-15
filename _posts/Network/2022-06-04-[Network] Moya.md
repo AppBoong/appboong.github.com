@@ -1,5 +1,5 @@
 ---
-title:  "Moya가 모야?"
+title:  "[Network] Moya가 모야?"
 last_modified_at: 2022-06-04T19:06:00-05:00
 toc: true
 categories:
@@ -20,6 +20,7 @@ tags:
 Network Layer를 템플릿화 해서 재사용성을 높히고, 개발자가 request, response에만 신경을 쓰도록 해줌
 - 열거형(enum)을 사용하여 네트워크 요청을 type-safe한 방식으로 캡슐화 하는데 초점을 맞춤
 
+![Moya](/images/2022-06-04-Moya/Moya.png)
 
 > **추상화란?**
 > 
@@ -161,4 +162,9 @@ class UserViewController: UIViewController {
 
 ### 출처:
 
+[Moya프레임 워크 (RESTFul API) (tistory.com)](https://ios-development.tistory.com/193)
+
+[Moya를 사용한 네트워킹 (Swift Http 통신) (velog.io)](https://velog.io/@dlskawns96/iOS-Moya%EB%A5%BC-%EC%82%AC%EC%9A%A9%ED%95%9C-%EB%84%A4%ED%8A%B8%EC%9B%8C%ED%82%B9-Swift-Http-%ED%86%B5%EC%8B%A0)
+
+[Moya에 대해서 공부해보아요 (tistory.com)](https://lidium.tistory.com/37)
 
