@@ -282,13 +282,11 @@ defaults:
   # default
   - scope:
       path: ""
-      type: sidebar_main
     values:
-      layout: single
-      classes: wide
+      layout: home
       author_profile: true
       sidebar:
-        nav: sidebar_main
+        nav: "main"
         
   # _posts
   - scope:
