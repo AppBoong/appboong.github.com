@@ -280,13 +280,14 @@ compress_html:
 # Defaults
 defaults:
   # default
-#  - scope:
-#      path: ""
-#    values:
-#      layout: home
-#      author_profile: true
-#      sidebar:
-#        nav: "main"
+  - scope:
+      path: ""
+      type: home
+    values:
+      layout: single
+      author_profile: true
+      sidebar:
+        nav: sidebar
         
   # _posts
   - scope:
