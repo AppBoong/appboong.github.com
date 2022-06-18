@@ -293,7 +293,7 @@ defaults:
       path: ""
       type: posts
     values:
-      layout: single
+      layout: home
       classes: wide
       author_profile: true
       read_time: false
