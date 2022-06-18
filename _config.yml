@@ -283,8 +283,8 @@ defaults:
   - scope:
       path: ""
     values:
-      layout: default
-      related: true
+      layout: home
+      classes: wide
       author_profile: true
       sidebar:
         nav: sidebar
@@ -297,7 +297,7 @@ defaults:
       layout: single
       classes: wide
       author_profile: true
-      read_time: true
+      read_time: false
       comments: # true
       share: true
       related: true
