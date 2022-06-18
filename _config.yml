@@ -283,7 +283,7 @@ defaults:
   - scope:
       path: ""
     values:
-      layout: home
+      layout: posts
       author_profile: true
       sidebar:
         nav: sidebar
