@@ -284,7 +284,7 @@ defaults:
       path: ""
       type: sidebar_main
     values:
-      layout: home
+      layout: single
       classes: wide
       author_profile: true
       sidebar:
