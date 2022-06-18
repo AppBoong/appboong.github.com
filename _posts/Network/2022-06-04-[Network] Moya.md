@@ -13,7 +13,7 @@ tags:
 # Moya
 
 ## `Alamofire`가 있지만 굳이 `Moya`를 쓰는 이유
-> 
+
 - `Alamofire`를 사용하면 URL과 같은 것을 사용할때 request에 넣어주어야 하며(Network Layer접근), 템플릿이 갖추어 지지 않아서 재사용에 유리하지 않은 구조이다
 - `Moya`를 사용하면 `Moya`에서 Network Layer를 템플릿화 해놨기 때문에, request, response만 처리하면 됨
 - `Moya`는 `URLSession` 을 추상화한 `Alamofire`를 다시 추상화한 프레임워크로
@@ -24,7 +24,7 @@ Network Layer를 템플릿화 해서 재사용성을 높히고, 개발자가 req
 
 > **추상화란?**
 > 
-- OOP의 특징중 하나로 객체들의 **공통적인 부분을 따로 뽑아내 구현해놓은 것**을 말함
+OOP의 특징중 하나로 객체들의 **공통적인 부분을 따로 뽑아내 구현해놓은 것**을 말함
 공통적인 부분들만 추려놓았기 때문에 구체적인 정보를 담아두지 못하고, 추상적인 정보만 모여있기 때문에 ‘추상화'라고 부름
 
 ## API Target Enum
