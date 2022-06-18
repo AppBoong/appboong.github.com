@@ -280,13 +280,13 @@ compress_html:
 # Defaults
 defaults:
   # default
-  - scope:
-      path: ""
-    values:
-      layout: home
-      author_profile: true
-      sidebar:
-        nav: "main"
+#  - scope:
+#      path: ""
+#    values:
+#      layout: home
+#      author_profile: true
+#      sidebar:
+#        nav: "main"
         
   # _posts
   - scope:
@@ -301,7 +301,7 @@ defaults:
       share: true
       related: true
       sidebar:
-        nav: sidebar_main
+        nav: sidebar
 
 #  # _pages
 #  - scope:
