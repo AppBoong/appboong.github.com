@@ -303,7 +303,7 @@ defaults:
       related: true
       search: true
       sidebar:
-        nav: _pages
+        nav: "_pages"
 
 #  # _pages
 #  - scope:
