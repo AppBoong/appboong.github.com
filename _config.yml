@@ -302,7 +302,8 @@ defaults:
       share: true
       related: true
       search: false
-      sidebar_main: true
+      sidebar:
+        nav: sidebar
 
 #  # _pages
 #  - scope:
