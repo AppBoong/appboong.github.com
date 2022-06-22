@@ -301,9 +301,8 @@ defaults:
       comments: # true
       share: true
       related: true
-#      search: true
-      sidebar:
-        nav: sidebar
+      search: false
+      sidebar_main: true
 
 #  # _pages
 #  - scope:
