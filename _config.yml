@@ -301,7 +301,7 @@ defaults:
       comments: # true
       share: true
       related: true
-      search: true
+#      search: true
       sidebar:
         nav: sidebar
 
