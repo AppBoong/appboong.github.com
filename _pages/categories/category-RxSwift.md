@@ -1,7 +1,7 @@
 ---
 layout: archive
 permalink: /categories/RxSwift
-title: "Post about RxSwift"
+title: "Posts about RxSwift"
 author_profile: true
 sidebar_main: true
 search : false

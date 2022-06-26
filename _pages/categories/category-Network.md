@@ -1,7 +1,7 @@
 ---
 layout: archive
 permalink: /categories/Network
-title: "Post about Network"
+title: "Posts about Network"
 author_profile: true
 sidebar_main: true
 search : false

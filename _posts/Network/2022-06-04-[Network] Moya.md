@@ -160,7 +160,7 @@ class UserViewController: UIViewController {
 }
 ```
 
-### Refernces:
+### References:
 
 [[Moya] Moya프레임 워크 (RESTFul API) (tistory.com)](https://ios-development.tistory.com/193)
 
