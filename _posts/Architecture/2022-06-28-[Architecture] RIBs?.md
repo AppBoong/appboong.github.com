@@ -271,3 +271,11 @@ final class HomeComponent: Component<HomeDependency> {
     물론, 논리 트리를 어떻게 구성했는지 참고 자료를 남겨두면 괜찮다.
     - 프로젝트에 전체적으로 적용되었을 때 힘을 발휘하는 프레임워크이다.  
     기존 프로젝트를 부분적으로 컨버팅하는 것은 무의미하고, 오히려 더 어렵다. 적용할 거면 처음부터...
+
+---
+
+## References
+
+[Swfit)RIBs - EEYatHo iOS](https://eeyatho.tistory.com/79)
+
+[RIBs란?](https://zeddios.tistory.com/937)

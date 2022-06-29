@@ -65,3 +65,9 @@ tags:
 ### 자동화된 테스트
 
 - 유닛테스트, 스냅샷 테스트, 통합 테스트, E2E 테스트
+
+--- 
+
+## References
+
+[슈퍼앱 운영을 위한 확정성 높은 앱 아키텍처 구축](https://fastcampus.co.kr/dev_red_rsj)
