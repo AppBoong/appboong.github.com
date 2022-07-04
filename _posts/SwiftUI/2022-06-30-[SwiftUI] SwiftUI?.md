@@ -1,5 +1,5 @@
 ---
-title: "[SwiftUI] 1. SwiftUI?"
+title: "[SwiftUI] SwiftUI?"
 last_modified_at: 2022-06-30T19:06:00-05:00
 toc: true
 categories:
