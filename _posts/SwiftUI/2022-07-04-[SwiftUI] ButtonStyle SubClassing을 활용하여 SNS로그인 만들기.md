@@ -10,7 +10,7 @@ tags:
   - SubClassing
 ---
 
-![sns_sign_in](/images/SwiftUI/sns_sign_in.png){width: 50% height: 50%}
+![sns_sign_in](/images/SwiftUI/sns_sign_in.png){: height='100px' width='100px'}
 
 
 SwiftUI로 진행하는 프로젝트에 위와같이 SNS로그인버튼으로 이뤄진 화면을 만들일이 생겨 코드를 짜봤다
@@ -341,6 +341,6 @@ var body: some View {
 
 이렇게 넣어주면 더깔끔해진다... ㄷㄷ (SwiftUI최고!)
 
-완성된 코드를 resume해주면 아래와같이 나온다
-![sns_sign_in_2](/images/SwiftUI/sns_sign_in_2.png){width: 50% height: 50%}
+완성된 코드를 resume해주면 아래와같이 나온다  
 
+![sns_sign_in_2](/images/SwiftUI/sns_sign_in_2.png){: height='100px' width='100px'}
