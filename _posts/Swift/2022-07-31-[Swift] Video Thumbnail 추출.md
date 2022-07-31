@@ -10,7 +10,9 @@ tags:
   - PHAsset
 ---
 
-# Video Thumbnail 추출
+# Video Thumbnail 추출  
+
+
 게시물을 업로드하는 기능에서 라이브러리에서 동영상을 선택한후 선택한 동영상의 썸네일을 띄워줘야 할 떄 여러가지 방법으로 표현할수 있겠지만, 오늘 해볼 방법은 `AVAssetImageGenerator`를 사용하여 영상의 원하는 시간에 대한 캡쳐 이미지를 뽑아오는 방법이다
 
 ### 1. 선택한 영상의 path값 추출
