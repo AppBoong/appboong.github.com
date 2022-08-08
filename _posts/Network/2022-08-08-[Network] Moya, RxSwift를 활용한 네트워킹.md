@@ -1,5 +1,5 @@
 ---
-title:  "2022-08-08-[Network] Moya, RxSwift를 활용한 네트워킹"
+title:  "[Network] Moya, RxSwift를 활용한 네트워킹"
 last_modified_at: 2022-08-08T19:06:00-05:00
 toc: true
 categories:
