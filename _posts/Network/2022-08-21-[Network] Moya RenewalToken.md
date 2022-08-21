@@ -123,3 +123,4 @@ func someRequest() -> Single<Response> {
             .map(SomeResponse.self)
 
 }
+```
