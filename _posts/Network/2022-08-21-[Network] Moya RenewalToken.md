@@ -116,7 +116,7 @@ extension PrimitiveSequence where Trait == SingleTrait, Element == Moya.Response
 
 let provider = MoyaProvider<SomeAPI>()
 
-func someRequest() -> Single<Response> {
+func someRequest() -> Single<SomeResponse> {
     return provider.rx.request(.getSomeData)
             .retryWithAuthIfNeeded() // 401에러가 뜨게되면 토큰만료 처리로직이 실행됨
             .filterSuccessfulStatusCodes()
