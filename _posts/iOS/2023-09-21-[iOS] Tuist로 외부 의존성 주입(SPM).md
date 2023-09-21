@@ -42,7 +42,7 @@ let project = Project(
             infoPlist: .extendingDefault(with: infoPlist),
             sources: ["Targets/MyApp/Sources/**"],
             resources: ["Targets/MyApp/Resources/**"],
-            dependencies: [.package(product: "swift-composable-architecture"),
+            dependencies: [.package(product: "ComposableArchitecture"),
                            .package(product: "Alamofire")],
             settings: .settings(base: ["DEVELOPMENT_TEAM": "team"])
         ),
