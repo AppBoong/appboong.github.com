@@ -1,11 +1,11 @@
 ---
-title: "ProcessInfo 를 활용하여 APIKey 안전하게 관리하기"
+title: "[iOS] ProcessInfo 를 활용하여 APIKey 안전하게 관리하기"
 last_modified_at: 2023-09-22T19:06:00-05:00
 toc: true
 categories:
   - iOS
 tags:
-  - Tuist
+  - ProcessInfo
   - Xcode
 ---
 
