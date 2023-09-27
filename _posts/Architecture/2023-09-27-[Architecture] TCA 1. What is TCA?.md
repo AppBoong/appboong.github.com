@@ -10,7 +10,8 @@ tags:
   - TCA
 ---
 
-# TCA?(The Composable Architecture)
+# TCA?(The Composable Architecture)  
+
 > TCA는 단방향 아키텍쳐로서, 기존의 단방향 아키텍쳐인 Redux의 영향을 많이 받았다  
 > Swift의 프레임워크로는 ReSwift와 ReactorKit과 비슷하다
 ## 단방향 아키텍쳐란(Uni-directional Flow, Architecture) ?
