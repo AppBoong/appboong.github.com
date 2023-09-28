@@ -1,5 +1,5 @@
 ---
-title:  "[TCA] 1. What is TCA??"
+title:  "[TCA] 1. What is TCA?"
 last_modified_at: 2023-09-27T19:06:00-05:00
 toc: true
 categories:
