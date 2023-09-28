@@ -14,7 +14,7 @@ tags:
 ## State
 > 앱의 데이터와 현재 상태를 나타낸다. 앱의 UI를 그릴때 필요한 모둔 정보를 보유하는 구조체이다
 
-```Swift
+```swift
 struct CounterState {
   var count = 0 
 }
@@ -23,7 +23,7 @@ struct CounterState {
 ## Action
 > State를 변경할 수 있는 사용자의 상호작용이나 이벤트 등을 Action이라 한다
 
-```Swift
+```swift
 enum CounterAction {
   case addCount
   case substractCount
@@ -32,7 +32,7 @@ enum CounterAction {
 
 ## Environment
 > API클라이언트나 데이터 서비스 같이 App이 필요로 하는 의존성(Dependency)를 가지고있다
-```Swift
+```swift
 struct CounterEnvironment {
   var client: APIClient
 }
@@ -42,7 +42,7 @@ struct CounterEnvironment {
 > 어떤 Action이 주어졌을 때 지금 State를 다음 State로 변화시키는 방법을 가지고 있는 함수
 - Reducer는 실행할 수 있는 Effect를 반환해야 하며 보통은 .none을 반환한다
 
-```Swift
+```swift
 let counterReducer = Reducer<CounterState, CounterAction, CounterEnvironment> { state, action, environment in 
   switch action {
     case .addCount:
@@ -59,7 +59,7 @@ let counterReducer = Reducer<CounterState, CounterAction, CounterEnvironment> { 
 ## Store
 > Store는 앱의 State를 유지하고 Action에 대한 응답으로 Reducer를 실행하는 역할을 담당한다
 
-```Swift
+```swift
 let store = Store(
   initialState: CounterState(),
   reducer: counterReducer,
@@ -73,7 +73,7 @@ let store = Store(
 ## Usage
 ### TCA를 SwiftUI프로젝트에 적용시키는 방법을 알아보자
 
-```Swift
+```swift
 struct CounterView: View {
   let store: Store<CounterState, CounterAction>
 
