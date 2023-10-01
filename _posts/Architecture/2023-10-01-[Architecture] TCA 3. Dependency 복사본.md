@@ -10,7 +10,8 @@ tags:
   - TCA
 ---
 
-# Dependency  
+# Dependency   
+
 > API Client나 Data Service 같은 외부 의존성을 주입해야하는 부분에 사용됩니다.
  이는 Client 를 완전히 분리해서 구현 할 수 있는 장점이 있고 테스트 환경에도 쉽게 적용이 가능해 로직이 집중되어 있는 곳을 정리할 수 있습니다.
 
