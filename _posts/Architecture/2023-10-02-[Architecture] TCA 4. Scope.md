@@ -21,7 +21,7 @@ struct Search: Reducer {
   struct State: Equatable {
     var searchText = ""
     var searchResults = [Item] = []
-    var itemDetail: ItemDetail.Result?
+    var itemDetail: ItemDetail.State?
   }
 
   enum Action: Equatable {
@@ -53,7 +53,7 @@ struct Search: Reducer {
           return .none
         }
         case .showItemDetail(let result):
-        state.itemDetail = result
+        state.itemDetail = .init(result: result)
         return .none
 
         case .dismissItemDetail:
@@ -68,8 +68,53 @@ struct Search: Reducer {
       }
   }
 }
-```
 
+struct ItemDetail: Reducer {
+  struct State: Equatable {
+    let result: Item.Result
+
+    init(result: Item.Result) {
+      self.result = result
+    }
+  }
+
+  enum Action: Equatable {
+    case onAppear
+    case onDisAppear
+  }
+
+  var body: some ReduceOf<Self> {
+    Reduce { state, action in 
+    switch action {
+      case .onAppear:
+      return .none
+      case .onDisappear: 
+      return .none
+    }
+    }
+  }
+}
+```
+- 자식 State 를 부모 State 에 포함 시킴으로서 부모Reducer가 자식 Reducer의 State 객체를 치환 혹은 초기화가 가능하다
+
+- ifLet 스코프는 말그대로 State의 어떤 값이 optional 일때 해당 값이 들어오면 Reducer를 갈아끼워 주고싶을때 용이하다
+  - 위 코드는 어떤 정보를 찾고 리스트에서 해당 객체를 눌렀을때 detail을 띄워주는 로직이다
+
+- ifLet 이 아닌 원래의 Scope는 다음과 같이 사용할 수 있다
+```swift
+
+var body: some ReduceOf<Self> {
+  Scope(state: \.someState, action: /Action.someAction) {
+    AnotherReducer()
+    // someAction이 들어왔을때 AnotherReducer로 처리하겠다
+  }
+
+  Reduce { state, action in 
+   //Action switch문
+  } 
+}
+
+```
 
 
 ## Reference
