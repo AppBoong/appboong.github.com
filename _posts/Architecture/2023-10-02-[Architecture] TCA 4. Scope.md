@@ -117,7 +117,3 @@ var body: some ReduceOf<Self> {
 ```
 
 
-## Reference
-https://medium.com/naverfinancial/%EB%84%A4%EC%9D%B4%EB%B2%84%ED%8E%98%EC%9D%B4-%EC%9B%8C%EC%B9%98%EC%95%B1-tca-%EC%A0%81%EC%9A%A9%EA%B8%B0-655f1d1b8c23
-
-
