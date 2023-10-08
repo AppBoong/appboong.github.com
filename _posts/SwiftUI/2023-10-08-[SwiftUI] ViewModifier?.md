@@ -63,7 +63,6 @@ struct ContentView: View {
                                             lineColor: .red,
                                             cornerRadius: 15))
         }
-        .padding()
     }
 }
 ```
