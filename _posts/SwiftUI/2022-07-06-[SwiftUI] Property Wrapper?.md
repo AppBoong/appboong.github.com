@@ -14,7 +14,7 @@ tags:
 
 ## What is Property Wrapper?
 
-> [Swift 공식문서](https://docs.swift.org/swift-book/LanguageGuide/Properties.html): **A property wrapper** adds a layer of separation between code that manages how a property is stored and the code that defines a property.
+> [Swift 공식문서](https://docs.swift.org/swift-book/documentation/the-swift-programming-language/properties): **A property wrapper** adds a layer of separation between code that manages how a property is stored and the code that defines a property.
 
 번역해보자면 Property Wrapper는 프로퍼티가 저장되는 방식을 관리하는 코드와 프로퍼티가 정의되는 코드 사이에 분리된 계층을 추가해준다는 뜻이다
 
